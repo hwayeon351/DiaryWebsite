@@ -1,0 +1,80 @@
+html{
+  height: 100%;
+  background: linear-gradient(#3065AC, #E5C1C5);
+  padding: 15%;
+  position: relative;
+}
+body{
+  font-family: verdana;
+  font-size: 17px;
+  color: #252525;
+}
+.ParentDiv{
+  background-color: white;
+  text-align: center;
+  margin:0 auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 60%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  padding: 10%;
+}
+.HeaderP{
+  position: fixed;
+  top: -10%;
+  left: -40%;
+  width: 100%;
+  letter-spacing: 2px;
+  color: #FAFAFA;
+  font-style: italic;
+  font-size: 22px;
+}
+.TitleP{
+  letter-spacing: 2px;
+  color: #C0C0C0;
+  font-weight: bold;
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 15%;
+}
+.Input{
+  width: 65%;
+  height: 40px;
+  padding: 0 10px;
+  margin-bottom: 25px;
+  border: 1px solid #D1D1D1;
+  border-radius: 4px;
+}
+.JoinBtn{
+  outline: none;
+  border: 0;
+  border-radius: 40px;
+  width: 70%;
+  margin: 15px 0;
+  height: 40px;
+  font-size: 17px;
+  box-shadow: 2px 2px 2px rgba(0,0,0,0.3), -2px -2px 3px rgba(0,0,0,0.1);
+  background: linear-gradient(to left, #3065AC, #BFD4DB);
+  letter-spacing: 2px;
+  color: #FFFFFF;
+}
+.CancelP{
+  margin-top: 80px;
+  font-family: verdana;
+}
+.CancelBtn{
+  outline: none;
+  border: 0;
+  border-radius: 40px;
+  width: 70%;
+  margin: 15px 0;
+  height: 40px;
+  font-size: 17px;
+  box-shadow: 2px 2px 2px rgba(0,0,0,0.3), -2px -2px 3px rgba(0,0,0,0.1);
+  background: linear-gradient(to left, #957DAD, #D291BC);
+  letter-spacing: 2px;
+  color: #FFFFFF;
+  font-family: verdana;
+}
