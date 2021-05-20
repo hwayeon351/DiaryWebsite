@@ -1,0 +1,118 @@
+html{
+  height: 100%;
+  background: linear-gradient(#3065AC, #E5C1C5);
+  padding: 15%;
+  position: relative;
+}
+body{
+  font-family: verdana;
+  font-size: 17px;
+  color: #252525;
+}
+.ParentDiv{
+  background-color: white;
+  text-align: center;
+  margin:0 auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 60%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  padding: 10%;
+}
+.HeaderDiv{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #966FD6;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.HeaderP{
+  padding-left: 5%;
+  text-align: left;
+  display: inline-block;
+  letter-spacing: 2px;
+  color: #FAFAFA;
+  font-style: italic;
+  font-size: 22px;
+  width: 50%;
+}
+.UserInfoP{
+  display: inline-block;
+  width: 35%;
+  color: #FAFAFA;
+}
+.LogoutBtn{
+  margin-right: 5%;
+  display: inline-block;
+  width: 100px;
+  height: 30px;
+  outline: none;
+  border: 0;
+  border-radius: 8px;
+  background: #625682;
+  box-shadow: 1px 1px 1px rgba(0,0,0,0.3), -2px -2px 3px rgba(0,0,0,0.1);
+  letter-spacing: 2px;
+  color: #FFFFFF;
+  font-family: verdana;
+  font-size: 12px;
+}
+.DiaryImg{
+  min-height: 300px;
+  min-width: 200px;
+  max-width: 600px;
+  max-height: 400px;
+}
+.Description{
+  text-align: left;
+  padding: 20px;
+  min-height: 200px;
+  border: 1px solid #D1D1D1;
+  border-radius: 8px;
+  box-shadow: 2px 2px 2px rgba(0,0,0,0.3), -2px -2px 3px rgba(0,0,0,0.1);
+}
+.HeadTable{
+  width: 100%;
+  border-bottom: 2px solid #D1D1D1;
+}
+.TimeP{
+  width: 100%;
+}
+.EditBtn{
+  width: 70px;
+  height: 30px;
+  float: right;
+  outline: none;
+  border: 0;
+  border-radius: 8px;
+  background: #625682;
+  box-shadow: 1px 1px 1px rgba(0,0,0,0.3), -2px -2px 3px rgba(0,0,0,0.1);
+  letter-spacing: 2px;
+  color: #FFFFFF;
+  font-family: verdana;
+  font-size: 12px;
+}
+.DeleteBtn{
+  width: 70px;
+  height: 30px;
+  float: right;
+  outline: none;
+  border: 0;
+  border-radius: 8px;
+  background: #625682;
+  box-shadow: 1px 1px 1px rgba(0,0,0,0.3), -2px -2px 3px rgba(0,0,0,0.1);
+  letter-spacing: 2px;
+  color: #FFFFFF;
+  font-family: verdana;
+  font-size: 12px;
+}
+.TimeTd{
+  width: 70%;
+}
+.BtnTd{
+  width: 10%;
+}
