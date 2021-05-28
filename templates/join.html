@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Join</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/join.css') }}">
+  </head>
+  <body>
+    <div class="ParentDiv">
+      <p class="HeaderP">My Diary</p>
+      <p class="TitleP">CREATE ACCOUNT</p>
+      {%with messages = get_flashed_messages()%}
+        {%if messages %}
+          {% for message in messages%}
+            <p class="FlashP"> {{ message }} </p>
+          {% endfor %}
+        {%endif%}
+      {%endwith%}
+      <div class = "FormDiv">
+        <form class="" action="/join" method="post">
+          <input class="Input" type="text" name="user_name" value="" placeholder="Your Name">
+          <input class="Input" type="text" name="user_phone" value="" placeholder="Phone Number">
+          <input class="Input" type="text" name="user_id" value="" placeholder="Your ID">
+          <input class="Input" type="password" name="user_pw" value="" placeholder="Password">
+          <input class="JoinBtn" type="submit" name="check" value="SIGN UP">
+        </form>
+        <p class="CancelP">Do you have accounts already?</p>
+        <form action="/join" method="post">
+          <input class="CancelBtn" type="submit" name="check" value="CANCEL">
+        </form>
+      </div>
+    </div>
+
+  </body>
+</html>

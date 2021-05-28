@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+    <title>Home</title>
+
+  </head>
+  <body>
+    <div class="ParentDiv">
+      <div class="HeaderDiv">
+        <p class="HeaderP">My Diary</p>
+        <p class="UserInfoP"> Welcome {{ user_id }} !!</p>
+
+        <form class="" action="/logout" method="post">
+          <input class="LogoutBtn" type="submit" name="logout" value="SIGN OUT">
+        </form>
+      </div>
+
+      <form class="" action="/post" method="post">
+        <input class="POSTBtn" type="submit" name="check" value="POST NEW DIARY">
+      </form>
+      {%with messages = get_flashed_messages()%}
+        {%if messages %}
+          {% for message in messages%}
+            <p class="FlashP"> {{ message }} </p>
+          {% endfor %}
+        {%endif%}
+      {%endwith%}
+
+      <table>
+        {% for diary in diarys %}
+          <tr>
+            <table>
+              <tr>
+                <table class="HeadTable">
+                  <td class="TimeTd">
+                    <p class="TimeP"> 
+                      {{ diary.time.strftime('%Y') + "/" + diary.time.strftime('%m') + "/" + diary.time.strftime('%d') + " " + diary.time.strftime('%H') + ":" + diary.time.strftime('%M') + ":" +  diary.time.strftime('%S') }} 
+                    </p>
+                  </td>
+                  <td class="BtnTd">
+                    <form class="" action="/edit" method="post">
+                      <input type="hidden" name = "diary_id" value = "{{ diary.diary_id }}">
+                      <input class="EditBtn" type="submit" name="check" value="EDIT">
+                    </form>
+                  </td>
+                  <td class="BtnTd">
+                    <form class="" action="/delete" method="post">
+                      <input type="hidden" name = "diary_id" value = "{{ diary.diary_id }}">
+                      <input class="DeleteBtn" type="submit" name="check" value="DELETE">
+                    </form>
+                  </td>
+                </table>
+              </tr>
+              <tr>
+                {% set file_path = diary.img_path %}
+                <img class="DiaryImg" src="{{ url_for('static', filename = diary.img_path) }}" alt="">
+              </tr>
+              <tr>
+                <div class="Description">
+                  {{ diary.description }}
+                </div>
+              </tr>
+            </table>
+          </tr>
+        {% endfor %}
+      </table>
+    </div>
+  </body>
+</html>

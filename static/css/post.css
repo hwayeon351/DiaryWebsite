@@ -22,7 +22,7 @@ body{
 }
 .HeaderP{
   position: fixed;
-  top: -20%;
+  top: -18%;
   left: 0;
   width: 100%;
   letter-spacing: 2px;
@@ -40,6 +40,11 @@ body{
 }
 p{
   margin-top: 10%;
+}
+.FlashP{
+  text-align: center;
+  color: #8b0000;
+  background-color: #FDFD96;
 }
 textarea{
   width: 100%;

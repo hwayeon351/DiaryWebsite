@@ -1,5 +1,5 @@
 html{
-  height: 100%;
+  height: 300%;
   background: linear-gradient(#3065AC, #E5C1C5);
   padding: 15%;
   position: relative;
@@ -8,17 +8,23 @@ body{
   font-family: verdana;
   font-size: 17px;
   color: #252525;
+
+}
+.FlashP{
+  text-align: center;
+  color: #8b0000;
+  background-color: #FDFD96;
 }
 .ParentDiv{
   background-color: white;
   text-align: center;
   margin:0 auto;
   position: absolute;
-  top: 50%;
+  top: 10%;
   left: 50%;
   width: 60%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -10%);
+  transform: translate(-50%, -10%);
   padding: 10%;
 }
 .HeaderDiv{
@@ -26,7 +32,7 @@ body{
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #966FD6;
+  background: linear-gradient(45deg, #4D3095, #44103C);
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -36,7 +42,7 @@ body{
   text-align: left;
   display: inline-block;
   letter-spacing: 2px;
-  color: #FAFAFA;
+  color: #F6ECF5;
   font-style: italic;
   font-size: 22px;
   width: 50%;
@@ -44,40 +50,59 @@ body{
 .UserInfoP{
   display: inline-block;
   width: 35%;
-  color: #FAFAFA;
+  color: #F6ECF5;
+}
+.POSTBtn{
+  margin-top: 10%;
+  margin-right: 5%;
+  width: 100%;
+  height: 40px;
+  outline: none;
+  border: 0;
+  border-radius: 8px;
+  background: linear-gradient(217deg, #E5C1C5, #957DAD 70.71%),
+  linear-gradient(127deg, #3065AC, #4D3095 70.71%),
+  linear-gradient(336deg, #44103C, #D1D1D1 70.71%);
+  box-shadow: 1px 1px 1px rgba(0,0,0,0.3), -2px -2px 3px rgba(0,0,0,0.1);
+  letter-spacing: 2px;
+  color: #F6F6EB;
+  font-family: verdana;
+  font-size: 18px;
 }
 .LogoutBtn{
-  margin-right: 5%;
+  margin-right: 20px;
   display: inline-block;
   width: 100px;
   height: 30px;
   outline: none;
   border: 0;
   border-radius: 8px;
-  background: #625682;
+  background: #957DAD;
   box-shadow: 1px 1px 1px rgba(0,0,0,0.3), -2px -2px 3px rgba(0,0,0,0.1);
   letter-spacing: 2px;
-  color: #FFFFFF;
+  color: #F6ECF5;
   font-family: verdana;
   font-size: 12px;
 }
 .DiaryImg{
-  min-height: 300px;
-  min-width: 200px;
-  max-width: 600px;
-  max-height: 400px;
+  min-height: 150px;
+  min-width: 150px;
+  max-width: 300px;
+  max-height: 300px;
 }
 .Description{
   text-align: left;
   padding: 20px;
-  min-height: 200px;
+  min-height: 100px;
   border: 1px solid #D1D1D1;
   border-radius: 8px;
   box-shadow: 2px 2px 2px rgba(0,0,0,0.3), -2px -2px 3px rgba(0,0,0,0.1);
+  margin-bottom: 10px;
 }
 .HeadTable{
   width: 100%;
   border-bottom: 2px solid #D1D1D1;
+  margin-top: 30px;
 }
 .TimeP{
   width: 100%;
@@ -89,7 +114,7 @@ body{
   outline: none;
   border: 0;
   border-radius: 8px;
-  background: #625682;
+  background: #957DAD;
   box-shadow: 1px 1px 1px rgba(0,0,0,0.3), -2px -2px 3px rgba(0,0,0,0.1);
   letter-spacing: 2px;
   color: #FFFFFF;
@@ -103,7 +128,7 @@ body{
   outline: none;
   border: 0;
   border-radius: 8px;
-  background: #625682;
+  background: #957DAD;
   box-shadow: 1px 1px 1px rgba(0,0,0,0.3), -2px -2px 3px rgba(0,0,0,0.1);
   letter-spacing: 2px;
   color: #FFFFFF;

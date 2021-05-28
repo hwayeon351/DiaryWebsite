@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+  </head>
+  <body>
+    <div class="LoginDiv">
+      <p class="HeaderP">My Diary</p>
+      <p class="TitleP">SIGN IN</p>
+      {%with messages = get_flashed_messages()%}
+        {%if messages %}
+          {% for message in messages%}
+            <p class="LoginFailP"> {{ message }} </p>
+          {% endfor %}
+        {%endif%}
+      {%endwith%}
+      <div class="FormDiv">
+        <form class="" action="http://localhost:5000/login" method="post">
+          <div class="RowDiv">
+              <img class="RowImg" alt="" src="{{ url_for('static', filename = 'images/user_icon.png') }}">
+              <input class="RowInput" type="text" name="user_id" placeholder="Your ID">
+          </div>
+          <div class="RowDiv">
+              <img class="RowImg" alt="" src="{{ url_for('static', filename = 'images/pw_icon.png') }}">
+              <input class="RowInput" type="password" name="user_pw" placeholder="Password">
+          </div>
+          <input class="LoginBtn" type="submit" name="check" value="SIGN IN">
+        </form>
+        <p class="JoinP">Do you want to create a new account?</p>
+        <form action="http://localhost:5000/login" method="post">
+          <input class="JoinBtn" type="submit" name="check" value="SIGN UP">
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

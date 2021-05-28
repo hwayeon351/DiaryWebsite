@@ -11,7 +11,6 @@ body{
 }
 .ParentDiv{
   background-color: white;
-  text-align: center;
   margin:0 auto;
   position: absolute;
   top: 50%;
@@ -23,8 +22,8 @@ body{
 }
 .HeaderP{
   position: fixed;
-  top: -10%;
-  left: -40%;
+  top: -8%;
+  left: 0%;
   width: 100%;
   letter-spacing: 2px;
   color: #FAFAFA;
@@ -38,6 +37,14 @@ body{
   text-align: center;
   font-size: 32px;
   margin-bottom: 15%;
+}
+.FlashP{
+  text-align: center;
+  color: #8b0000;
+  background-color: #FDFD96;
+}
+.FormDiv{
+  text-align: center;
 }
 .Input{
   width: 65%;

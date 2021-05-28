@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>PostDiary</title>
+    <link rel="stylesheet" href=" {{ url_for('static', filename = 'css/post.css') }} ">
+  </head>
+  <body>
+    <div class="ParentDiv">
+      <p class="HeaderP">My Diary</p>
+      <p class="TitleP">Post a new diary!</p>
+      {%with messages = get_flashed_messages()%}
+        {%if messages %}
+          {% for message in messages%}
+            <p class="FlashP"> {{ message }} </p>
+          {% endfor %}
+        {%endif%}
+      {%endwith%}
+      <form class="" action="/post" method="post" enctype = "multipart/form-data">
+        <p>Picture</p>
+        <input type="file" name="diary_img" value="" accept="image/gif, image/jpeg, image/jpg, image/png">
+        <p>Description</p>
+        <textarea name="diary_description" placeholder="Input about your daily life."></textarea>
+      <div class="ButtonDiv">
+        <input class="SaveBtn" type="submit" name="check" value="SAVE">
+      </form>
+        <form action="/post" method="post">
+          <input class="CancelBtn" type="submit" name="check" value="CANCEL">
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
